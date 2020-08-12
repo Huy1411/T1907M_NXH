@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="T1907M_NXH.GridView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1907M_NXH"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <GridView ItemsSource="{Binding Source={StaticResource MyCsv}}" 
+              CanReorderItems="True"
+              CanDragItems="True" 
+              AllowDrop="True" 
+              Padding="120,160,80,80">
+        <GridView.ItemTemplate>
+            <DataTemplate>
+                <Grid Background="{Binding Brush}" Height="50" Width="200">
+                    <TextBlock FontSize="20" Text="{Binding Text}" VerticalAlignment="Center" Margin="11" Foreground="Gainsboro"/>
+                    <TextBlock FontSize="20" Text="{Binding Text}" VerticalAlignment="Center" Margin="11" Foreground="Black"/>
+                </Grid>
+            </DataTemplate>
+        </GridView.ItemTemplate>
+    </GridView>
+</Page>

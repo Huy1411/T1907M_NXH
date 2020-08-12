@@ -15,11 +15,6 @@
             <Rectangle Fill="Blue" Width="220" Height="220" />
             <Ellipse Fill="Red" Width="175" Height="175" />
             <Polygon Fill="Green" Points="0,0 275,0 275,200" />
-            <Rectangle Fill="Blue" Width="220" Height="220"/>
-            <Ellipse Fill="Red" Width="175" Height="175" />
-            <Polygon Fill="Green" Points="0,0 275,0 275,200" />
-
-
         </StackPanel>
     </ScrollViewer>
 </Page>

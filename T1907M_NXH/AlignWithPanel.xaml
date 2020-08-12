@@ -9,9 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <Rectangle x:Name="RedRect" Height="100" Width="100" Fill="Red" 
+        <Rectangle x:Name="YellowRect" Height="100" Width="100" Fill="Yellow" 
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    RelativePanel.AlignVerticalCenterWithPanel="True"/>
         <Rectangle x:Name="BlueRect" Height="100" Width="200" Fill="Blue"/>
+
+        <Rectangle x:Name="RedRect" Height="100" Width="100" Fill="Red" 
+                   RelativePanel.Below="BlueRect"
+                   RelativePanel.AlignHorizontalCenterWith="BlueRect"/>
+
     </RelativePanel>
 </Page>
