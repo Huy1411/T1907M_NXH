@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,7 +21,7 @@ namespace xBindingDataExample.Models
     {
         public static List<Book> GetBooks()
         {
-            var books = new List<Book>;
+            var books = new List<Book>();
             books.Add(new Book { BookId = 1, Title = "Vulpate", Author = "Futurum", CoverImage = "Assets/1.png" });
             books.Add(new Book { BookId = 2, Title = "Mazim", Author = "Sequiter Que", CoverImage = "Assets/2.png" });
             books.Add(new Book { BookId = 3, Title = "Elit", Author = "Tempor", CoverImage = "Assets/3.png" });
@@ -34,6 +35,8 @@ namespace xBindingDataExample.Models
             books.Add(new Book { BookId = 11, Title = "Erat", Author = "Volupat", CoverImage = "Assets/11.png" });
             books.Add(new Book { BookId = 12, Title = "Consequat", Author = "Est Possim", CoverImage = "Assets/12.png" });
             books.Add(new Book { BookId = 13, Title = "Aliquip", Author = "Magna", CoverImage = "Assets/13.png" });
+            return books;
         }
+       
     }
 }
