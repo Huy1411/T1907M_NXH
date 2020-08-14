@@ -37,7 +37,7 @@ namespace FakeNews.Model
                 Headline = "Lorem Ipsum",
                 Subhead = " doro sit amet",
                 DateLine = "Nunc tristique nec",
-                Image = "Assets/Financial1.png"
+                Image = "Assets/Financial.png"
             });
             items.Add(new NewsItem()
             {
@@ -68,13 +68,59 @@ namespace FakeNews.Model
             });
             items.Add(new NewsItem()
             {
-                Id = 4,
+                Id = 5,
                 Category = "Financial",
                 Headline = "Mauris bibendum non leo vitae tempor",
                 Subhead = " In nisi tostor , eleifend sed ipsum eget",
                 DateLine = " Curabiur dictum augue vitae elementum ultrices",
                 Image = "Assets/Financial4.png"
             });
+            items.Add(new NewsItem()
+            {
+                Id = 6,
+                Category = "Food",
+                Headline = "Lorem Ipsum",
+                Subhead = " doro sit amet",
+                DateLine = "Nunc tristique nec",
+                Image = "Assets/Food1.png"
+            });
+            items.Add(new NewsItem()
+            {
+                Id = 7,
+                Category = "Financial",
+                Headline = "etiam ac felis viverra",
+                Subhead = " vulputate nils ac, aliquet nisi",
+                DateLine = "tortor porttitior , eu fermentum ante conque ",
+                Image = "Assets/Food2.png"
+            });
+            items.Add(new NewsItem()
+            {
+                Id = 8,
+                Category = "Financial",
+                Headline = "Interger sed  turpis erat",
+                Subhead = "Sed quis hendtrerit lorem , quis interdum dolor ",
+                DateLine = " in viverra metus facilisis sed",
+                Image = "Assets/Food3.png"
+
+            });
+            items.Add(new NewsItem()
+            {
+                Id = 9,
+                Category = "Financial",
+                Subhead = "aliquet quis ipsum tincidunt ",
+                DateLine = "nterger eleifend ",
+                Image = "Assets/Food4.png"
+            });
+            items.Add(new NewsItem()
+            {
+                Id = 10,
+                Category = "Financial",
+                Headline = "Mauris bibendum non leo vitae tempor",
+                Subhead = " In nisi tostor , eleifend sed ipsum eget",
+                DateLine = " Curabiur dictum augue vitae elementum ultrices",
+                Image = "Assets/Food5.png"
+            });
+
             return items;
         }
     }

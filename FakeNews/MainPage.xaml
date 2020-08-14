@@ -56,10 +56,10 @@
                     </ListBoxItem>
                     <ListBoxItem Name="Food">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="&#xE80F;"
+                            <TextBlock Text="&#xE1CE;"
                                        FontSize="20"
                                        FontFamily="Segoe MDL2 Assets"/>
-                            <TextBlock Text="Financial"
+                            <TextBlock Text="Food"
                                        FontSize="18"
                                        Margin="20,0,0,0"/>
                         </StackPanel>
@@ -76,14 +76,22 @@
                             <Grid Background="White" Margin="10" Height="275" Width="200">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Image Name="MyImage" Source="{x:Bind Image}"/>
                                 <RelativePanel Grid.Row="1">
                                     <TextBlock Text="{x:Bind Headline}"/>
+                                </RelativePanel>
+                                <RelativePanel Grid.Row="2">
                                     <TextBlock Text="{x:Bind Subhead}"/>
+                                </RelativePanel>
+                                <RelativePanel Grid.Row="3">
                                     <TextBlock Text="{x:Bind DateLine}"/>
                                 </RelativePanel>
+                                
+                                    
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>
