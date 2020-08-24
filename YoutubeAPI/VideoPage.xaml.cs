@@ -1,6 +1,7 @@
 ﻿using Google.Apis.Services;
 using Google.Apis.Util;
 using Google.Apis.YouTube.v3;
+using MyToolkit.Multimedia;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,7 @@ namespace YoutubeAPI
     /// </summary>
     public sealed partial class VideoPage : Page
     {
-        Model.Video video;
+        Video video;
 
         public VideoPage()
         {
@@ -44,26 +45,8 @@ namespace YoutubeAPI
             {
                 if (NetworkInterface.GetIsNetworkAvailable())
                 {
-                    video = e.Parameter as Model.Video;
-
-                  //  Google.Apis.YouTube.v3.YouTubeService youTube = new YouTubeService();
-                    
-                    //YouTubeService youtube = new YouTubeService(new BaseClientService.Initializer()
-                    //{
-                    //    ApplicationName = "youtube",
-                    //    ApiKey = "AIzaSyDBf8bq5AKUSHfF_CF0eeZ2RCLzyfmOi5s",
-                    //});
-                    //SearchResource.ListRequest listRequest = youtube.Search.List("snippet");
-                    //listRequest.Q = "Loeb Pikes Peak";
-                    //listRequest.MaxResults = 5;
-                    //listRequest.Type = "video";
-                    //SearchListResponse resp = listRequest.Execute();
-                    //foreach (SearchResult result in resp.Items)
-                    //{
-                    //    Console.WriteLine(result.Snippet.Title);
-                    //}
-
-                      var Url = await YouTube.GetVideoUriAsync(video.Id, YouTubeQuality.Quality1080P);
+                    video = e.Parameter as Video;
+                    YouTubeUri Url = await YouTube.GetVideoUriAsync(video.Id, YouTubeQuality.Quality1080P);
 
                     Player.Source = Url.Uri;
 

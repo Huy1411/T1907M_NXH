@@ -19,7 +19,7 @@ namespace YoutubeAPI
         private YouTubeService youTubeService =
             new YouTubeService(new BaseClientService.Initializer
             {
-                ApiKey = "AIzaSyDBf8bq5AKUSHfF_CF0eeZ2RCLzyfmOi5s",
+                ApiKey = "AIzaSyBiHEgO0GmNolX-B1P1Y7NYS8qjM11fYa4",
                 ApplicationName = "youtube"
             });
         List<Video> ListVideo = new List<Video>();
@@ -38,7 +38,7 @@ namespace YoutubeAPI
                 {
                     var Request = youTubeService.Search.List("snippet");
                   
-                    Request.ChannelId = "UCsooa4yRKGN_zEE8iknghZA";
+                    Request.ChannelId = "UCkyrwWdnBPixlzQADYQJ8ow";
                     Request.MaxResults = 25;
                     Request.Type = "video";
                     Request.Order = SearchResource.ListRequest.OrderEnum.Date;

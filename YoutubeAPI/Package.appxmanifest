@@ -45,5 +45,10 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <uap:Capability Name="videosLibrary"/>
+    <Capability Name="allJoyn"/>
+    <DeviceCapability Name="microphone"/>
+    <DeviceCapability Name="location"/>
+    <DeviceCapability Name="webcam"/>
   </Capabilities>
 </Package>
