@@ -22,16 +22,16 @@ namespace WeatherJson.Models
         public string Link { get; set; }
     }
     public class Minimum 
-    { 
+    {
         public double Value { get; set; }
-        public double Unit { get; set; }
-        public double UnitType { get; set; }
+        public string Unit { get; set; }
+        public int UnitType { get; set; }
     }
     public class Maximum 
     {
         public double Value { get; set; }
-        public double Unit { get; set; }
-        public double UnitType { get; set; }
+        public string Unit { get; set; }
+        public int UnitType { get; set; }
     }
     public class Temperature1 
     {
@@ -39,7 +39,7 @@ namespace WeatherJson.Models
         public Maximum Maximum { get; set; }
     }
     public class Day 
-    { 
+    {
         public string Icon { get; set; }
         public string IconPhrase { get; set; }
     }
@@ -68,7 +68,6 @@ namespace WeatherJson.Models
             var http = new HttpClient();
             var response = await http.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
-
             var serializer = new DataContractJsonSerializer(typeof(WeatherEachDay));
             var dataStream = new MemoryStream(Encoding.UTF8.GetBytes(result)); // format
             var value = serializer.ReadObject(dataStream) as WeatherEachDay;

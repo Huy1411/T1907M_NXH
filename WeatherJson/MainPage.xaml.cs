@@ -29,7 +29,7 @@ namespace WeatherJson
         private async void InitJSON()
         {
             var url = "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/353412?"
-                + "apikey=YvLXLyI3SiE8xuQKF3p4A1B1I1RksiXR&language=vi-vn&metric=true";
+                + "apikey=tbFOLXfZmAxAexEYOmXhcxnbZBDjQBSh&metric=true";
             var list = await WeatherJSON.GetJSON(url) as List<WeatherJSON>;
             Debug.WriteLine("Count:" + list.Count);
             list.ForEach(it =>
@@ -56,14 +56,15 @@ namespace WeatherJson
         private async void InitEachDaysJSON()
         {
             var urlFiveDay = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/353412?"
-                + "apikey=YvLXLyI3SiE8xuQKF3p4A1B1I1RksiXR&language=vi-vn&metric=true";
+                + "apikey=tbFOLXfZmAxAexEYOmXhcxnbZBDjQBSh&metric=true";
             var obj = await WeatherEachDay.GetWeatherEach(urlFiveDay) as WeatherEachDay;
             obj.DailyForecasts.ForEach(it =>
             {
                 var matchs = Regex.Matches(it.Date, "\\d+");
                 var date = new DateTime(int.Parse(matchs[0].Value), int.Parse(matchs[1].Value), int.Parse(matchs[2].Value));
                 it.Date = date.DayOfWeek.ToString();
-                it.Day.Icon = string.Format("https://votex.accuweather.com/adc2010/images/slate/icons/{0}.svg", it.Day.Icon);
+                it.Day.Icon = string.Format("https://votex.accuweather.com/adc2010/images/slate/icons/{0}.svg",
+                    it.Day.Icon);
                 Debug.WriteLine("Binh: " + it.Date);
                 WeatherEachDays.Add(it);
             });
