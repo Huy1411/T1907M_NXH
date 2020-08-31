@@ -29,7 +29,7 @@ namespace UWPSQLiteDemo
         {
             this.InitializeComponent();
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-            conn = new SQLite.Net.SQLiteConnection(SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+            conn = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
             conn.CreateTable<Customer>();
         }
 
