@@ -60,7 +60,7 @@ namespace NetWork
                 
         }
 
-        private void AddBormarks_Click(object sender, RoutedEventArgs e)
+        private void AddBookmarks_Click(object sender, RoutedEventArgs e)
         {
             DataAccess.AddData(sourceImage.Text);
 
