@@ -40,7 +40,7 @@
                    Width="305" RenderTransformOrigin="0.508,0.844" Height="175"/>
             <Button x:Name="AddBookmarks"
                     RelativePanel.RightOf="TitleResult"
-                    Click="AddBormarks_Click" Content="Add Bormarks" />
+                    Click="AddBookmarks_Click" Content="Add Bormarks" />
             <TextBlock Name="ContentResult" TextWrapping="Wrap" 
                        RelativePanel.Below="ImageResult" Width="305" Height="180"/>
         </RelativePanel>
