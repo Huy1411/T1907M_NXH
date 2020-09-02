@@ -90,8 +90,6 @@
                                 <RelativePanel Grid.Row="3">
                                     <TextBlock Text="{x:Bind DateLine}"/>
                                 </RelativePanel>
-                                
-                                    
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>

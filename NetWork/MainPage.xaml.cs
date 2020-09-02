@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Media.Imaging;
+using static NetWork.Models.NetWorkJson.Content;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -33,7 +34,7 @@ namespace NetWork
         public MainPage()
         {
             this.InitializeComponent();
-            
+
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -47,7 +48,7 @@ namespace NetWork
                 DateResult.Text = myPage.date;
                 TitleResult.Text = myPage.title;
                 string description = myPage.content.description;
-                ContentResult1.Text = description;
+                ContentResult.Text = description;
             }
             catch (Exception)
             { 

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-
+    Width="320"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
 
@@ -16,15 +16,21 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox  Background="#FF0D3C3C" Text="NetWork" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="28" Margin="0,20,0,0" Width="320" Height="60" FontWeight="Bold" Foreground="White" />
-        <RelativePanel Margin="10,81,0,55">
+        <RelativePanel Grid.Row="0" Background="#FF165D38">
+            <TextBlock Text="NetWork" FontSize="30"
+                       Foreground="White"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       Margin="30"
+                       FontWeight="Bold"/>
+        </RelativePanel>
+        <RelativePanel Grid.Row="1" Margin="10,0,0,136">
             <TextBlock  x:Name="DateResult" TextWrapping="Wrap" Width="314" Height="32" FontSize="20"  RelativePanel.AlignLeftWithPanel="True" FocusVisualPrimaryBrush="Black"/>
             <TextBlock x:Name="TitleResult" TextWrapping="Wrap" RelativePanel.Below="DateResult" Width="305" Height="57"/>
             <Image x:Name="ImageResult"  RelativePanel.Below="TitleResult" Width="305" RenderTransformOrigin="0.508,0.844" Height="175"/>
-            <TextBlock Name="ContentResult1" TextWrapping="Wrap" RelativePanel.Below="ImageResult" Width="305" Height="180"/>
+            <TextBlock Name="ContentResult" TextWrapping="Wrap" RelativePanel.Below="ImageResult" Width="305" Height="180"/>
         </RelativePanel>
 
     </Grid>
-  
-    
+
+
 </Page>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -10,23 +11,23 @@ using System.Threading.Tasks;
 namespace NetWork.Models
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
-    
+
     public class NetWorkJson
     {
         public class Content
-    {
-        public string description { get; set; }
-        public string url { get; set; }
-    }
+        {
+            public string description { get; set; }
+            public string url { get; set; }
+        }
 
-    public class News
-    {
-        public int id { get; set; }
-        public string date { get; set; }
-        public string title { get; set; }
-        public string image { get; set; }
-        public Content content { get; set; }
-    }
+        public class News
+        {
+            public int id { get; set; }
+            public string date { get; set; }
+            public string title { get; set; }
+            public string image { get; set; }
+            public Content content { get; set; }
+        }
         public async static Task<News> GetNetWorkJson()
         {
             var http = new HttpClient();
