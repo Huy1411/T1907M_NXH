@@ -35,7 +35,7 @@ namespace NetWork
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (Home.IsSelected)
+            if (Home2.IsSelected)
             {
                 content.Navigate(typeof(MainPage));
             }

@@ -29,7 +29,7 @@
                 <ListBox SelectionMode="Single"
                          Name="IconsListBox"
                          SelectionChanged="IconsListBox_SelectionChanged">
-                    <ListBoxItem Name="Home">
+                    <ListBoxItem Name="Home2">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets"
                                        FontSize="36"

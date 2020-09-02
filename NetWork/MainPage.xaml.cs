@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Media.Imaging;
-using static NetWork.Models.NetWorkJson.Content;
+using DataAccessLibrary;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -34,6 +34,8 @@ namespace NetWork
         public MainPage()
         {
             this.InitializeComponent();
+            sourceImage.Visibility = Visibility.Collapsed;
+
 
         }
 
@@ -47,6 +49,7 @@ namespace NetWork
                 ImageResult.Source = new BitmapImage(new Uri(image, UriKind.Absolute));
                 DateResult.Text = myPage.date;
                 TitleResult.Text = myPage.title;
+                sourceImage.Text = myPage.image;
                 string description = myPage.content.description;
                 ContentResult.Text = description;
             }
@@ -55,6 +58,13 @@ namespace NetWork
 
             }
                 
+        }
+
+        private void AddBormarks_Click(object sender, RoutedEventArgs e)
+        {
+            DataAccess.AddData(sourceImage.Text);
+
+
         }
     }
 }

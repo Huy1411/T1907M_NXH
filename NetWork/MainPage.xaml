@@ -24,10 +24,25 @@
                        FontWeight="Bold"/>
         </RelativePanel>
         <RelativePanel Grid.Row="1" Margin="10,0,0,136">
-            <TextBlock  x:Name="DateResult" TextWrapping="Wrap" Width="314" Height="32" FontSize="20"  RelativePanel.AlignLeftWithPanel="True" FocusVisualPrimaryBrush="Black"/>
-            <TextBlock x:Name="TitleResult" TextWrapping="Wrap" RelativePanel.Below="DateResult" Width="305" Height="57"/>
-            <Image x:Name="ImageResult"  RelativePanel.Below="TitleResult" Width="305" RenderTransformOrigin="0.508,0.844" Height="175"/>
-            <TextBlock Name="ContentResult" TextWrapping="Wrap" RelativePanel.Below="ImageResult" Width="305" Height="180"/>
+            
+            <TextBlock  x:Name="DateResult" 
+                        TextWrapping="Wrap"
+                        Width="314"
+                        Height="32"
+                        FontSize="20"  
+                        RelativePanel.AlignLeftWithPanel="True"
+                        FocusVisualPrimaryBrush="Black"/>
+            <TextBlock x:Name="TitleResult" TextWrapping="Wrap" 
+                       RelativePanel.Below="DateResult" 
+                       Width="305" Height="57"/>
+            <TextBlock Name="sourceImage"/>
+            <Image x:Name="ImageResult"  RelativePanel.Below="TitleResult" 
+                   Width="305" RenderTransformOrigin="0.508,0.844" Height="175"/>
+            <Button x:Name="AddBookmarks"
+                    RelativePanel.RightOf="TitleResult"
+                    Click="AddBormarks_Click" Content="Add Bormarks" />
+            <TextBlock Name="ContentResult" TextWrapping="Wrap" 
+                       RelativePanel.Below="ImageResult" Width="305" Height="180"/>
         </RelativePanel>
 
     </Grid>
